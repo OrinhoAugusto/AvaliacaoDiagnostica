@@ -1,23 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <script src="home.js"></script>
-    <title>Bem-vindo à Home!</title>
+    <title>Poupança</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
     <div class="layer">
-        <h2>Bem-vindo à nossa Home!</h2>
+        <img src="assets/logo_small.png" onclick="redirectHome()">
         <nav>
-            <a href="./login.html">Login</a>
-            <a>Sobre</a>
+            <div class="bg-ham-menu" onclick="showMenu()">
+                <span class="ham-menu"></span>
+            </div>
+            <a id="sobre" href="sobre.html">Sobre mim</a>
+            <a id="login" href="login.html">Log In</a>
         </nav>
     </div>
+    <div class="options">
+        <div class="option" onclick="redirectSobre()">Sobre mim</div>
+        <div class="option" onclick="redirectLogin()">Log In</div>
+    </div>
+    <div class="all">
+        <div class="division d1">
+            <a id="title">O que é poupança?</a>
+            <a id="texto">A poupança é uma forma de investimento em que você deposita dinheiro em uma conta bancária
+                específica e
+                recebe uma taxa de juros sobre esse dinheiro.
+            </a>
+        </div>
+        <div class="division d2">
+            <img src="assets/image-removebg-preview.png">
+            <div class="d2_1">
+                <a id="title">Segurança</a>
+                <a id="texto">A poupança é considerada um investimento seguro, já que os depósitos são garantidos pelo
+                    Fundo Garantidor
+                    de Créditos (FGC) em caso de falência do banco emissor.
+                </a>
+            </div>
+        </div>
+        <div class="division d3">
+            <div class="d4">
+                <a id="title">Liquidez</a>
+                <a id="texto">É fácil acessar seu dinheiro na poupança, pois você pode fazer saques a qualquer momento
+                    sem
+                    penalidade.
+                </a>
+            </div>
+            <div class="d5">
+                <a id="title">Rentabilidade</a>
+                <a id="texto">A taxa de juros da poupança é definida pelo governo e pode variar de acordo com a situação
+                    econômica do país. Atualmente, a rentabilidade da poupança é baixa em comparação com outras formas
+                    de
+                    investimento.
+                </a>
+            </div>
+        </div>
+        <div class="division d6">
+            <a id="title">Rendimento</a>
+            <a id="texto">A rentabilidade da poupança é calculada com base no saldo médio da conta ao longo do mês. Isso
+                significa que, se você fizer saques frequentes ou mantiver um saldo baixo, seu rendimento será menor.
+            </a>
+        </div>
+        <footer>
+            <p>MADE BY</p>
+            <img src="assets/orinho_small.png" style="width: 100px;">
+        </footer>
+    </div>
+    <script>
+        const redirectHome = () => {
+            location.href = "home.html"
+        }
+
+        const redirectSobre = () => {
+            location.href = "sobre.html"
+        }
+
+        const redirectLogin = () => {
+            location.href = "login.html"
+        }
+
+        let options = document.querySelector(".options")
+        let layer =  document.querySelector(".layer")
+        let on = false
+
+        const showMenu = () => {
+            if (on == false) {
+                options.style = 'transform: translateY(0)'
+                layer.style = 'box-shadow: 0 0 0 0 transparent !important;'
+                on = true
+            } else {
+                options.style = 'transform: translateY(-100%)'
+                layer.style = 'box-shadow: 0 2px 8px rgb(216, 216, 216);'
+                on = false 
+            }
+        }
+
+    </script>
 </body>
 
 </html>

@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Página de login</title>
+    <title>Log In</title>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <div class="all">
-        <img src="./assets/usuario-removebg-preview.png">
-        <h1>Faça login</h1>
-        <input type="email" placeholder="Digite seu e-mail">
-        <input type="password" placeholder="Digite sua senha">
+        <img src="assets/usuario-removebg-preview.png" id="user">
+        <h2>Faça login</h2>
+        <input class="info" type="email" placeholder="Informe seu e-mail">
+        <input class="info" type="password" placeholder="Informe sua senha">
+        <div class="all_2">
+            <button onclick="activate(this)" id="check"></button>
+            <label for="check">Lembrar-se</label>
+        </div>
         <button type="submit">Enviar</button>
+        <button class="cadast">Cadastrar</button>
     </div>
+    <script>
+        let check = document.getElementById('check')
+        let active = false
+        
+        const activate = (e) => {
+            if (active == false) {
+                e.innerHTML = '<img src="assets/check-removebg-preview.png" id="active">'
+                e.classList.add('active')
+                active = true
+            } else {
+                e.innerHTML = ''
+                e.classList.remove('active')
+                active = false
+            }
+        }
+
+    </script>
 </body>
 </html>

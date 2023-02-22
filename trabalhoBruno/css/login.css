@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: ch-background 5s ease-in-out infinite;
+    background: linear-gradient(45deg,#005792,rgb(148, 186, 226), #3171b7);
+    background-size: 400%;
+}
+
+h2 {
+    color: white;
+}
+
+#user {
+    filter: invert(1);
+    width: 100px;
+}
+
+.all {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all button {
+    border: 0;
+    border-radius: 5px;
+    width: calc(100% + 10px);
+    height: 40px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #ff9933;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.all_2 { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.all_2 a {
+    font-size: 15px;
+    color: #fafafa;
+}
+
+.info {
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #F0F0F0;
+}
+
+#check {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid#F0F0F0;
+    border-radius: 4px;
+    background-color: #F0F0F0;
+    font-size: 16px;
+    color: rgb(127, 127, 127);
+    transition: all .3s
+}
+
+label {
+    color: white;
+}
+
+#active {
+    width: 14px;
+    height: 14px;
+}
+
+.cadast {
+    background-color: #93d258 !important;
+}
+
+@keyframes ch-background {
+    0% {
+        background-position: 0%;
+
+    }
+
+    50%{
+        background-position: 100%;
+        
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}

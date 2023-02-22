@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+
+<body>
+    <div class="layer">
+        <img src="assets/logo_small.png" onclick="redirectHome()">
+        <nav>
+            <div class="bg-ham-menu" onclick="showMenu()">
+                <span class="ham-menu"></span>
+            </div>
+            <a id="sobre" href="home.html">Home</a>
+            <a id="login" href="login.html">Log In</a>
+        </nav>
+    </div>
+    <div class="options">
+        <div class="option" onclick="redirectHome()">Home</div>
+        <div class="option" onclick="redirectLogin()">Log In</div>
+    </div>
+    <div class="all">
+        <div class="sobre">
+            <a id="title">Quem sou eu?</h1>
+                <a id="texto">Meu nome é Augusto, tenho 16 anos e sou estudante de programação no Escola S.
+                    Comecei a aprender sobre criação de sites a cerca de cinco meses e venho aprendendo muito
+                    desde lá. Algumas das linguagens que usei até agora são HTML, CSS, JavaScript e Python.
+                </a>
+        </div>
+    </div>
+    <script>
+        const redirectHome = () => {
+            location.href = "home.html"
+        }
+
+        const redirectSobre = () => {
+            location.href = "sobre.html"
+        }
+
+        const redirectLogin = () => {
+            location.href = "login.html"
+        }
+
+        let options = document.querySelector(".options")
+        let layer = document.querySelector(".layer")
+        let on = false
+
+        const showMenu = () => {
+            if (on == false) {
+                options.style = 'transform: translateY(0)'
+                layer.style = 'box-shadow: 0 0 0 0 transparent !important;'
+                on = true
+            } else {
+                options.style = 'transform: translateY(-100%)'
+                layer.style = 'box-shadow: 0 2px 8px rgb(216, 216, 216);'
+                on = false
+            }
+        }
+    </script>
+</body>
+
+</html>
